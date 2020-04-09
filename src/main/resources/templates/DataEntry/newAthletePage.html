@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark" th:replace="fragments :: navigation"></nav>
+
+<body class="container-fluid text-center" onload="birthDateCal();">
+
+<section id="newAthleteDisplay" >
+
+    <div class="row justify-content-center">
+        <h3 th:text="${message}" th:classappend="${resultClass}"></h3>
+    </div>
+
+    <div class="row justify-content-center">
+        <form method="post" th:object="${newAthleteForm}" class="col-lg-6 dataContainer">
+
+            <h2>New Athlete Form</h2>
+            <hr>
+            <div class="form-group">
+                <label th:for="firstName" >First name: </label>
+                <input class="form-control" th:field="*{firstName}" type="text" />
+                <span th:errors="*{firstName}" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label th:for="lastName" >Last name: </label>
+                <input class="form-control" th:field="*{lastName}" type="text" />
+                <span th:errors="*{lastName}" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label th:for="competitionGender" >Competition gender: </label>
+                <select th:field="*{competitionGender}">
+                    <option value="women">Women's</option>
+                    <option value="men">Men's</option>
+                </select>
+                <span th:errors="*{competitionGender}" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label th:for="birthDate">Birth date: </label>
+                <input th:field="*{birthDate}" id="birthDate" type="text" autocomplete="off" class="form-control"  />
+                <span th:errors="*{birthDate}" class="error"></span>
+            </div>
+
+            <input type="submit" value="Add Athlete"/>
+
+        </form>
+    </div>
+
+</section>
+
+</body>
+</html>

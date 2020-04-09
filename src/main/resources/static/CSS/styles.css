@@ -1,0 +1,43 @@
+h1, h2, h3 {
+    text-align: center;
+}
+
+.dataContainer {
+  margin: 3%;
+  padding: 3%;
+  border-style: solid;
+  border-color: #698474;
+  border-radius: 20px;
+  position: relative;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.form-group {
+    font-weight: bold;
+}
+
+.errorMessage {
+    font-weight: bold;
+    margin-top: 3%;
+    padding: 2%;
+    border-style: solid;
+    border-color: #c81912;
+    border-radius: 10px;
+}
+
+.successMessage {
+    font-weight: bold;
+    margin-top: 3%;
+    padding: 2%;
+    border-style: solid;
+    border-color: #21bf73;
+    border-radius: 10px;
+}
